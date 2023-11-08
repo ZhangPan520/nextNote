@@ -9,7 +9,7 @@ app.use(express.static("build"));
 // 使用rednerToString将react组件转换成html文件
 const htmlContent = renderToString(<App></App>);
 
-app.get("/*", (req, res) => {
+app.get("/", (req, res) => {
   res.send(`<!DOCTYPE html>
   <html lang="en">
   <head>
